@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "NurProject1/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      
+      "dest": "NurProject1/wsgi.py"
+    }
+  ]
+}
